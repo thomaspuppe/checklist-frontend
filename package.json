@@ -1,0 +1,14 @@
+{
+  "name": "checklist",
+  "version": "0.1.0",
+  "description": "Styling experiments for checklist",
+  "author": "Thomas Puppe",
+  "__repository": { 
+      "type": "git", 
+      "url": "https://github.com/thomaspuppe/blog.thomaspuppe.de.git"
+  },
+  "license": "BSD-2-Clause",
+  "scripts": {
+    "build-css": "sass --watch ./assets/_sass/styles.sass:assets/css/styles.css"
+  }
+}

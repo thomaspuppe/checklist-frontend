@@ -2,7 +2,13 @@
 @font-face {
   font-family: "Norwester";
   src: url("../fonts/norwester/subset-Norwester-Regular.eot");
-  src: url("../fonts/norwester/norwester.eot?#iefix") format("embedded-opentype"), url("../fonts/norwester/norwester.woff") format("woff"), url("../fonts/norwester/norwester.ttf") format("truetype"), url("../fonts/norwester/norwester.svg#Norwester-Regular") format("svg");
+  src: url("../fonts/norwester/norwester.eot?#iefix") format("embedded-opentype"), url("../fonts/norwester/norwester.woff2") format("woff2"), url("../fonts/norwester/norwester.woff") format("woff"), url("../fonts/norwester/norwester.ttf") format("truetype"), url("../fonts/norwester/norwester.svg#Norwester-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "Amaranth";
+  src: url("../fonts/amaranth/subset-Amaranth.eot");
+  src: url("../fonts/amaranth/subset-Amaranth.eot?#iefix") format("embedded-opentype"), url("../fonts/amaranth/subset-Amaranth.woff2") format("woff2"), url("../fonts/amaranth/subset-Amaranth.woff") format("woff"), url("../fonts/amaranth/subset-Amaranth.ttf") format("truetype"), url("../fonts/amaranth/subset-Amaranth.svg#Amaranth") format("svg");
   font-weight: normal;
   font-style: normal; }
 body {
@@ -18,6 +24,7 @@ h1, h2, h3 {
   margin-bottom: 1.41667rem; }
 
 h1 {
+  font-family: Norwester;
   letter-spacing: 0.125rem;
   text-transform: uppercase; }
 
@@ -45,6 +52,7 @@ html, body {
 
 body {
   background: #f5f5f5;
+  color: #111;
   line-height: 1.41667rem; }
 
 p, ul, ol, pre, table, blockquote {
@@ -52,7 +60,8 @@ p, ul, ol, pre, table, blockquote {
   margin-bottom: 0; }
 
 header {
-  margin: 0 auto; }
+  margin: 0 auto;
+  text-align: center; }
   header a {
     color: #292929; }
 
@@ -68,7 +77,6 @@ header {
     margin: auto;
     max-width: 50rem; }
   .ribbon > h1 {
-    font-family: Norwester;
     max-width: 37.5rem; }
 
 main {
@@ -78,5 +86,43 @@ main {
   padding: 1.25rem;
   width: calc(100% - 92px);
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3); }
+
+ul.checklist {
+  list-style: none; }
+  ul.checklist li {
+    color: #444;
+    font-family: Amaranth;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    margin-bottom: 0.4em;
+    cursor: pointer; }
+  ul.checklist input[type="checkbox"] {
+    display: none; }
+  ul.checklist input[type="checkbox"] + label {
+    position: relative; }
+    ul.checklist input[type="checkbox"] + label:before {
+      content: "";
+      position: absolute;
+      width: 1rem;
+      height: 1rem;
+      border: 2px solid #e2e2e2;
+      top: 0;
+      left: -1.4em; }
+  ul.checklist input[type="checkbox"]:checked + label {
+    text-decoration: line-through; }
+    ul.checklist input[type="checkbox"]:checked + label:before {
+      border-color: #0F0;
+      border-top: none;
+      border-left: none;
+      transform: rotate(45deg);
+      height: 1.2rem;
+      width: 0.6rem;
+      left: -1.2em;
+      top: -0.1em; }
+
+.breadcrumbs {
+  color: #AAA;
+  font-family: sans-serif;
+  font-size: 0.8rem; }
 
 /*# sourceMappingURL=styles.css.map */

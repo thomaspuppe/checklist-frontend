@@ -1,0 +1,40 @@
+ul.checklist
+	list-style: none
+	li
+		color: #444
+		font-family: Amaranth
+		font-size: rem($base-font-size*1.2)
+		line-height: 1.4
+		margin-bottom: 0.4em
+		cursor: pointer
+
+	input[type="checkbox"]
+		display: none
+
+	input[type="checkbox"] + label
+		position: relative
+		&:before
+			content: ""
+			position: absolute
+			width: 1rem
+			height: 1rem
+			border: 2px solid #e2e2e2
+			top: 0
+			left: -1.4em
+
+	input[type="checkbox"]:checked + label
+		text-decoration: line-through
+		&:before
+			border-color: #0F0
+			border-top: none
+			border-left: none
+			transform: rotate(45deg)
+			height: 1.2rem
+			width: 0.6rem
+			left: -1.2em
+			top: -0.1em
+
+.breadcrumbs
+	color: #AAA
+	font-family: sans-serif
+	font-size: rem($base-font-size*0.8)
